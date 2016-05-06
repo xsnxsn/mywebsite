@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{margin:0;padding:0;font-size: 1em;box-sizing: border-box}
+        .wrap{width: 100%;height: auto;}
+        .header{height:8em;background: #89C5E1; }
+        .footer{height: 8em;background: lightblue;clear:both}
+        .content{width: 100%;height: 120em;}
+        .content-left{height:25em;background:  #f7f7f7;width:30%;float:left;}
+        .content-left-nav{width: 80%;margin: 15% auto;;padding:0;}
+        .content-left-nav li{;background: #89C5E1;width: 100%;margin-bottom: 1em;list-style: none;border: 1px solid black;border-radius: 0.7em;height: 2em;line-height: 2em;text-align: center}
+        .content-left-nav li.on{background: greenyellow}
+        .content-left-nav li a{text-decoration: none;display: block;color:black}
+        .content-left-nav li a:hover{text-decoration:underline;}
+        .content-right{height:120em;background:#EEEDE8;float:right;width: 70%}
+        .content-right-list{padding:2em;;}
+        .hide{display: none}
+        h4{border-top:3px solid #89C5E1;letter-spacing: 0.1em}
+        .content-right-list ul{overflow: hidden;padding:1em 3em 2em;}
+        .content-right-list li{list-style:none;float: left;margin:1em 1em 0 0;}
+        .content-right-list li a{display: block;text-decoration: none;border: 1px solid powderblue;padding:1.5em 2em;border-radius: 0.7em;float: left}
+        .content-right-list li a:hover{box-shadow: aquamarine 0.2em 0.2em 0.1em}
+    </style>
+    <script>
+      /*  window.onload=function(){
+            var a = document.getElementsByTagName("img")[0]
+            setTimeout(function(){
+                a.style.display="block";
+                setTimeout(function(){
+                    a.style.display="none"
+                },3000)
+
+            },2000)
+       }
+      */
+   window.onload= function(){
+        var aUl =document.getElementsByTagName("ul")[0];
+        var aLi =aUl.getElementsByTagName("li")
+       var x = document.getElementById("content-right")
+       var y = x.getElementsByTagName("div")
+       var len = aLi.length
+        for( var i =0;i<len;i++){
+            aLi[i].id = i;
+            aLi[i].onmouseover =function(){
+                for(var n=0;n<len;n++){
+                    aLi[n].className=""
+                    y[n].style.display="none"
+                }
+                aLi[this.id].className="on"
+                y[this.id].style.display="block"
+            }
+        }
+   }
+
+
+    </script>
+</head>
+
+<body>
+<div class="wrap">
+    <div class="header"></div>
+    <div class="content">
+        <div class="content-left">
+            <ul class="content-left-nav">
+                <li class="on"><a href="">学习资料</a></li>
+                <li><a href="">练习项目</a></li>
+                <li><a href="">手册</a></li>
+                <li><a href="">手册</a></li>
+                <li><a href="">手册</a></li>
+                <li><a href="">手册</a></li>
+            </ul>
+        </div>
+
+        <div class="content-right" id="content-right">
+                <div class="content-right-list">
+                    <h4>Websites</h4>
+                    <ul>
+                        <li><a href="http://www.w3schools.com/default.asp" target="_blank">w3schools.com</a></li>
+                        <li><a href="http://www.w3school.com.cn/css3/index.asp">w3c中文</a></li>
+                        <li><a href="https://www.codecademy.com/">codecademy</a></li>
+                        <li><a href="http://www.runoob.com/">runoob</a></li>
+                        <li><a href="http://www.imooc.com/">imooc</a></li>
+                        <li><a href="http://study.163.com/">网易云课堂</a></li>
+                        <li><a href="http://www.jikexueyuan.com/">极客学院</a></li>
+                    </ul>
+                    <h4>Blog</h4>
+                    <ul>
+                        <li><a href="http://www.ruanyifeng.com/blog/"  target="_blank">阮一峰</a></li>
+                        <li><a href="http://www.zhangxinxu.com/wordpress/"  target="_blank">张鑫旭</a></li>
+                        <li><a href="http://www.welefen.com/"  target="_blank">李成银</a></li>
+                        <li><a href="http://githuber.cn/people/153183"  target="_blank">小鱼</a></li>
+                        <li><a href="http://githuber.cn/people/2572987"  target="_blank">梁杰</a></li>
+                        <li><a href="https://www.baidufe.com/" target="_blank">Alien</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="content-right-list hide">
+                    <h4>Javascript project</h4>
+                    <ul>
+                        <li><a href="http://ihome.ust.hk/~lzhouaj/subwebsite/8.html" target="_blank">恋爱计时</a></li>
+                        <li><a href="http://ihome.ust.hk/~lzhouaj/subwebsite/picTimer.html">图片计时器</a></li>
+                        <li><a href="http://ihome.ust.hk/~lzhouaj/subwebsite/12.html">选项卡</a></li>
+                        <li><a href="http://ihome.ust.hk/~lzhouaj/subwebsite/clickandchange.html">图片切换</a></li>
+                        <li><a href="">手册</a></li>
+                        <li><a href="">手册</a></li>
+                        <li><a href="">手册</a></li>
+                        <li><a href="">手册</a></li>
+                    </ul>
+                </div>
+            <div class="content-right-list hide">
+                <h4>22222</h4>
+                <ul>
+                    <li><a href="http://www.w3schools.com/default.asp" target="_blank">w3schools.com</a></li>
+                    <li><a href="http://www.w3school.com.cn/css3/index.asp">w3c中文</a></li>
+                    <li><a href="">手册</a></li>
+                    <li><a href="">手册</a></li>
+                    <li><a href="">手册</a></li>
+                    <li><a href="">手册</a></li>
+                    <li><a href="">手册</a></li>
+                    <li><a href="">手册</a></li>
+                </ul>
+            </div>
+            <div class="content-right-list hide">
+                <h4>333333</h4>
+                <ul>
+                    <li><a href="http://www.w3schools.com/default.asp" target="_blank">w3schools.com</a></li>
+                    <li><a href="http://www.w3school.com.cn/css3/index.asp">w3c中文</a></li>
+                    <li><a href="">手册</a></li>
+                    <li><a href="">手册</a></li>
+                    <li><a href="">手册</a></li>
+                    <li><a href="">手册</a></li>
+                    <li><a href="">手册</a></li>
+                    <li><a href="">手册</a></li>
+                </ul>
+            </div>
+            <div class="content-right-list hide">
+                <h4>444444</h4>
+                <ul>
+                    <li><a href="http://www.w3schools.com/default.asp" target="_blank">w3schools.com</a></li>
+                    <li><a href="http://www.w3school.com.cn/css3/index.asp">w3c中文</a></li>
+                    <li><a href="">手册</a></li>
+                    <li><a href="">手册</a></li>
+                    <li><a href="">手册</a></li>
+                    <li><a href="">手册</a></li>
+                    <li><a href="">手册</a></li>
+                    <li><a href="">手册</a></li>
+                </ul>
+            </div>
+            <div class="content-right-list hide">
+                <h4>555555</h4>
+                <ul>
+                    <li><a href="http://www.w3schools.com/default.asp" target="_blank">w3schools.com</a></li>
+                    <li><a href="http://www.w3school.com.cn/css3/index.asp">w3c中文</a></li>
+                    <li><a href="">手册</a></li>
+                    <li><a href="">手册</a></li>
+                    <li><a href="">手册</a></li>
+                    <li><a href="">手册</a></li>
+                    <li><a href="">手册</a></li>
+                    <li><a href="">手册</a></li>
+                </ul>
+            </div>
+        </div>>
+    </div>
+    <div class="footer"></div>
+</div>
+</body>
+</html>
