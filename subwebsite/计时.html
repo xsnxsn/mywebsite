@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    window.onload =function() {
+        clock();
+        function clock() {
+            var iCurrent = new Date()
+            var iFuture = new Date(2010, 6, 6, 20, 0, 0)
+            var t = Math.floor((iCurrent - iFuture) / 1000)
+            var str = "我们恋爱了:"+parseInt(t / 365 / 86400) + "年" + parseInt((t/24/60/60)%60) + '天' + parseInt((t/60/60)%24) + '时' + parseInt((t/60)%60) + '分' + parseInt(t % 60) + '秒';
+            document.body.innerHTML = str
+        }
+        setInterval(clock, 1000)
+    }
+</script>
+</body>
+</html>
